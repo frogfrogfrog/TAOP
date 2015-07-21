@@ -1,4 +1,4 @@
-package chapter1.section4;
+package chapter1.section4and5;
 
 public class Palindrome {
 	public static void main(String[] args){

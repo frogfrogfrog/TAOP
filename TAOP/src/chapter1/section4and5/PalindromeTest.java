@@ -1,4 +1,4 @@
-package chapter1.section4;
+package chapter1.section4and5;
 
 import static org.junit.Assert.*;
 
