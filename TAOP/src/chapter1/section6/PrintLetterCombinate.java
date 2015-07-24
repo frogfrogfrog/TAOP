@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class PrintLetterCombinate {
 	public static void main(String[] args) {
-		String str="abcdefg";
+		String str="abcde";
 		combination(str);
 	}
 	
