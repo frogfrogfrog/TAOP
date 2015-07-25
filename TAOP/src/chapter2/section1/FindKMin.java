@@ -15,12 +15,19 @@ public class FindKMin {
 //			System.out.print(i);
 //		}
 		
-		int[] a1=new int[]{3,2,1};
-		int[] a2=new int[]{3,2,4,5,1};
-		int[] result=findKMinOfTwoArray(a1, a2, 6);
-		for(int i:result){
-			System.out.print(i+" ");
-		}
+//		int[] a1=new int[]{3,2,1};
+//		int[] a2=new int[]{3,2,4,5,1};
+//		int[] result=findKMinOfTwoArray(a1, a2, 6);
+//		for(int i:result){
+//			System.out.print(i+" ");
+//		}
+		
+		int[] a=new int[]{1,5,2,6,3,7,4};
+		
+		System.out.println(quickSelectK(a.clone(), 3, 1, 4));
+		System.out.println(quickSelectK(a.clone(), 1, 3, 3));
+		System.out.println(quickSelectK(a.clone(), 3, 0, 6));
+		
 	}
 	public static void quickSort(int[] data,int start,int end){
 		if(start<end){
@@ -56,9 +63,9 @@ public class FindKMin {
 			int i=start+1;
 			int j=end;
 			while(true){
-				while(data[i]<pivot)
+				while(i<=end && data[i]<pivot)
 					i++;
-				while(data[j]>pivot)
+				while(j>start && data[j]>pivot)
 					j--;
 				//经过计算i和j分别是本次循环中第一个大于和小于中间值的数
 				if(i<j){
@@ -79,6 +86,11 @@ public class FindKMin {
 				quickSort(data,j+1,end);
 			}
 		}
+	}
+	
+	public static int quickSelectK(int[] data,int k,int start,int end){
+		quickSelect(data, k, start, end);
+		return data[start+k-1];
 	}
 	
 	
